@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Outfit:wght@100..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+    --text-t1: 40px;
+    --text-t2: 24px;
+    --text-t3: 14px;
+    --text-body-lg: 20px;
+    --text-body-sm: 16px;
+
+    --font-primary: "Outfit", sans-serif;
+    
+    /* color */
+    /* white */
+    /* gray50, gray200, gray400, gray900 */
+
+}
+
+@layer base {
+  h1 { @apply text-t1 text-white font-bold }
+  h2 { @apply text-t3 sm:text-t2 font-bold }
+  h3 { @apply text-t3 }
+  body { @apply text-body-sm text-gray-900 font-primary uppercase font-semibold}
+  button {@apply cursor-pointer uppercase font-bold}
+}
+
+@layer utilities {
+  .container-pro { @apply max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-16; }
+  
+  .pd-t-xs { @apply pt-[16px]}
+  .pd-t-sm { @apply pt-[32px] }
+  .pd-t-md { @apply pt-[64px] }
+  .pd-t-lg { @apply pt-[128px] }
+  .pd-t-xl { @apply pt-[256px] }
+
+  .pd-b-sm { @apply pb-[16px]}
+  .pd-b-sm { @apply pb-[32px] }
+  .pd-b-md { @apply pb-[64px] }
+  .pd-b-lg { @apply pb-[128px] }
+  .pd-b-xl { @apply pb-[256px] }
+  
+}
