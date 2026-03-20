@@ -6,7 +6,7 @@ export default function EndMessage({winner, firstPlayer, reset}) {
 
   const iswin = winner.o || winner.x ? true : winner.tie ? false : null
   const order = iswin 
-    ? (winner.x && firstPlayer === 'x') || (winner.o && firstPlayer === 'o') ? 1 : 2
+    ? (winner.x && firstPlayer.current === 'x') || (winner.o && firstPlayer.current === 'o') ? 1 : 2
     : null
 
   return (
